@@ -1,4 +1,4 @@
-package testing;
+package demo;
 
 public class Main {
 
