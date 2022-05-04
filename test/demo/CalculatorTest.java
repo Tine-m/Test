@@ -3,6 +3,7 @@ package demo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.DisabledIfSystemProperty;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -10,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
 
-  Calculator calculator = new Calculator();
+  Calculator calculator;
 
   @BeforeEach
   public void setUp() {
@@ -26,6 +27,7 @@ class CalculatorTest {
     assertEquals(15, actual);
   }
 
+  @Disabled
   @Test
   void sumLargeIntegers() {
     //Act
@@ -52,7 +54,6 @@ class CalculatorTest {
     assertEquals(expected, actual);
   }
 
-  @Disabled
   @Test
   void sumTooLargeIntegers2() {
     //Act + Assert

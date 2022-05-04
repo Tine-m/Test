@@ -12,4 +12,5 @@ public class Calculator {
   public double sum(double dec1, double dec2) {
     return dec1 + dec2;
   }
+
 }
